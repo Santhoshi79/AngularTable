@@ -1,0 +1,124 @@
+<div class="container">
+    <div style="margin-top: 10px;">
+        <!-- <mat-form-field class="search">
+            <mat-label>Search</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. cash" #input>
+          </mat-form-field>
+          <mat-icon>search</mat-icon> -->
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSource">
+                
+                <ng-container matColumnDef="valueid">
+                    <th mat-header-cell *matHeaderCellDef>
+                        <span [style.paddingLeft.px]="32"></span>
+                    </th>
+                    <td mat-cell *matCellDef="let data">
+                        <button mat-icon-button [style.visibility]="!data.expandable ? 'hidden' : ''"
+                            [style.marginLeft.px]="data.level * 15" (click)="treeControl.toggle(data)">
+                            <mat-icon class="mat-icon-rtl-mirror">
+                                {{treeControl.isExpanded(data) ? 'expand_more' : 'chevron_right'}}
+                            </mat-icon>
+                        </button>
+                        {{data.valueid}}
+                    </td>
+                </ng-container>
+                <ng-container matColumnDef="objName">
+                    <th mat-header-cell *matHeaderCellDef> ObjName </th>
+                    <td mat-cell *matCellDef="let data"> {{data.objName}} </td>
+                </ng-container>
+                <ng-container matColumnDef="account">
+                    <th mat-header-cell *matHeaderCellDef>
+
+
+                        <!-- <span [style.paddingLeft.px]="20"> Actor </span> -->Account
+                    </th>
+                    <td mat-cell *matCellDef="let data"> {{data.account}} </td>
+                </ng-container>
+                <ng-container matColumnDef="createdOn">
+                    <th mat-header-cell *matHeaderCellDef> CreatedOn </th>
+                    <td mat-cell *matCellDef="let data"> {{data.createdOn}} </td>
+                </ng-container>
+                <ng-container matColumnDef="createdBy">
+                    <th mat-header-cell *matHeaderCellDef> CreatedBy </th>
+                    <td mat-cell *matCellDef="let data"> {{data.createdBy}} </td>
+                </ng-container>
+                <ng-container matColumnDef="currency">
+                    <th mat-header-cell *matHeaderCellDef> Currency </th>
+                    <td mat-cell *matCellDef="let data"> {{data.currency}} </td>
+                </ng-container>
+                
+                 <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef>
+                        <span [style.paddingLeft.px]="20"> Actions </span>
+                    </th>
+                    <td mat-cell *matCellDef="let row">
+                        <button mat-icon-button color="primary">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-stroked-button color="accent">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </td>
+                </ng-container>
+                
+                <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>-->
+                <!-- Row shown when there is no matching data. -->
+                 <tr class="mat-row" *matNoDataRow>
+                    <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+                    </tr> 
+            <!--</table>
+           
+        </div>
+    </div>
+</div>-->
+
+
+
+
+
+
+
+<!--<h1 style="text-align: center; color: rgb(245, 242, 249);
+background-color: rgb(23, 182, 218);">
+<strong><i>Data Table</i></strong>
+</h1>-->
+<!--<input type="text" matInput placeholder="Search">-->
+<!--<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="check">
+         <head style="color: aquamarine;">
+         <style> table,th,td{ border: 20px solid rgb(23, 182, 218);</style> }
+          </head>
+          < <th mat-header-cell *matHeaderCellDef style="width: 15px;">
+             <mat-checkbox></mat-checkbox></th>
+              <td mat-cell *matCellDef="let data">
+                <mat-checkbox></mat-checkbox>-->
+                <!--</td> </ng-container>
+                 <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef>
+                         <span><i> ObjName </i></span>
+                          </th>
+                           <td mat-cell *matCellDef="let data">
+                             <button mat-icon-button [style.visibility]="!data.expandable ? 'hidden' : ''" [style.marginLeft.px]="data.level * 32" (click)="treeControl.toggle(data)">
+                                 <mat-icon class="mat-icon-rtl-mirror"> {{treeControl.isExpanded(data) ? 'expand_more' : 'chevron_right'}}
+                                    </mat-icon>
+                                     </button> {{data.name}}</td> </ng-container>
+                                     <ng-container matColumnDef="account">
+                                        <th mat-header-cell *matHeaderCellDef> <i>Account</i> </th>
+                                         <td mat-cell *matCellDef="let data"> {{data.account}} </td>
+                                          </ng-container> <ng-container matColumnDef="createdOn">
+                                             <th mat-header-cell *matHeaderCellDef> <i> Created On</i> </th>
+                                              <td mat-cell *matCellDef="let data"> {{data.createdOn}} </td> </ng-container>
+                                               <ng-container matColumnDef="createdBy">
+                                                 <th mat-header-cell *matHeaderCellDef> <i>Created By</i> </th>
+                                                  <td mat-cell *matCellDef="let data"> {{data.createdBy}} </td>
+                                                   </ng-container> <ng-container matColumnDef="currency">
+                                                     <th mat-header-cell *matHeaderCellDef> <i>Currency</i> </th>
+                                                     <td mat-cell *matCellDef="let data"> {{data.currency}} </td>
+                                                     </ng-container> 
+                                                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr></table>-->
+
+
+
+
